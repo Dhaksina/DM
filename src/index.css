@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "FSP DEMO - PODIUM Sharp 4.11";
+  src: url("https://db.onlinewebfonts.com/t/8b75d9dcff6a48c35a46656192adf019.eot");
+  src: url("https://db.onlinewebfonts.com/t/8b75d9dcff6a48c35a46656192adf019.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/8b75d9dcff6a48c35a46656192adf019.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/8b75d9dcff6a48c35a46656192adf019.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/8b75d9dcff6a48c35a46656192adf019.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/8b75d9dcff6a48c35a46656192adf019.svg#FSP DEMO - PODIUM Sharp 4.11") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  background-color: #0C0C0C;
+  color: #D7E2EA;
+  font-family: 'Kanit', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Specific class for hero text gradient */
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar utility for marquee row horizontal scroll if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer utilities {
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .font-podium {
+    font-family: "FSP DEMO - PODIUM Sharp 4.11", sans-serif;
+  }
+
+  .animate-fade-up {
+    opacity: 0;
+    animation: fade-up 0.8s ease-out forwards;
+  }
+  .animate-fade-up-delay-1 {
+    opacity: 0;
+    animation: fade-up 0.8s ease-out 0.2s forwards;
+  }
+  .animate-fade-up-delay-2 {
+    opacity: 0;
+    animation: fade-up 0.8s ease-out 0.4s forwards;
+  }
+  .animate-fade-up-delay-3 {
+    opacity: 0;
+    animation: fade-up 0.8s ease-out 0.6s forwards;
+  }
+  .animate-fade-up-delay-4 {
+    opacity: 0;
+    animation: fade-up 0.8s ease-out 0.8s forwards;
+  }
+  .animate-fade-in {
+    opacity: 0;
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  .animate-fade-in-delay {
+    opacity: 0;
+    animation: fade-in 0.8s ease-out 0.3s forwards;
+  }
+  .animate-scale-in {
+    opacity: 0;
+    animation: scale-in 0.8s ease-out forwards;
+  }
+}

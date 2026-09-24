@@ -65,10 +65,10 @@ const defaultProjects = [
   },
   {
     num: "06",
-    category: "Coming Soon",
-    name: "Coming Soon",
-    imageUrl: "/project-card-launch.png",
-    liveUrl: ""
+    category: "Industrial Calibration Web Application",
+    name: "MSIR INDIA - Precision Calibration",
+    imageUrl: "/msir-main.png",
+    liveUrl: "https://msirindia.com/"
   },
   {
     num: "07",
@@ -95,7 +95,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
   }
 
   const displayProjects = React.useMemo(() => {
-    // Slice first 5 from defaultProjects to avoid duplicates
     const list: DisplayProjectItem[] = isDynamic && projects 
       ? projects.map((p) => ({
           category: p.category,
@@ -103,7 +102,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
           imageUrl: p.imageUrl,
           liveUrl: p.liveUrl
         })) 
-      : defaultProjects.slice(0, 5).map((p) => ({
+      : defaultProjects.filter((p) => p.category !== "Coming Soon").map((p) => ({
           category: p.category,
           name: p.name,
           imageUrl: p.imageUrl,
@@ -113,12 +112,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
 
     const fullList: DisplayProjectItem[] = [
       ...list,
-      {
-        category: "Coming Soon",
-        name: "Coming Soon",
-        imageUrl: "/project-card-launch.png",
-        liveUrl: ""
-      },
       {
         category: "Coming Soon",
         name: "Coming Soon",

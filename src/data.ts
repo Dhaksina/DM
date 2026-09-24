@@ -113,5 +113,12 @@ export const projects: ProjectData[] = [
     imageUrl: "/oceanfresh-main.png",
     order: 5,
     liveUrl: "https://github.com/dashboard"
+  },
+  {
+    title: "MSIR INDIA - Precision Calibration",
+    category: "Industrial Calibration Web Application",
+    imageUrl: "/msir-main.png",
+    order: 6,
+    liveUrl: "https://msirindia.com/"
   }
 ];
